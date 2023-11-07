@@ -50,6 +50,9 @@ body {
 
                     .nav-section {
 
+                        .cancelIcon {
+                            display: none;
+                        }
 
                         .logo {
                             padding: 20px 0px 10px 30px;
@@ -112,7 +115,10 @@ body {
                                     }
                                 }
 
-                                .hoverView:hover {}
+                                .hoverView:hover {
+
+                                    background-color: #FFCA39;
+                                }
                             }
                         }
 
@@ -195,9 +201,9 @@ body {
                     height: 500px;
                 }
 
-                .hover-section {
+                .hover-service-section {
 
-                    // display: none;
+                    display: none;
                     position: relative;
 
                     .grid-container {
@@ -219,6 +225,7 @@ body {
 
                                 .li-grids {
                                     list-style: none;
+                                    padding: 0;
 
 
                                     a {
@@ -252,6 +259,10 @@ body {
 
 
 
+                                }
+
+                                .li-grids:hover {
+                                    border-bottom: 3px solid #0099D8;
                                 }
                             }
                         }
@@ -308,7 +319,331 @@ body {
                 .show {
                     display: block;
                 }
+
+
+                .hover-work-section {
+                    display: none;
+
+                    .outer-work-container {
+
+
+                        display: flex;
+                        justify-content: center;
+
+                        .inner-work-section {
+                            width: 1158px;
+                            height: 429px;
+                            background: @seconday-color;
+
+                            .ourWorks {
+
+                                .workDiv {
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    padding-top: 30px;
+
+
+                                    .portfolioDiv {
+                                        max-width: 328px;
+                                        position: relative;
+
+
+                                        .details {
+
+                                            position: absolute;
+                                            bottom: 18px;
+
+
+                                            .workTitle {
+                                                font: 500 28px/22px @oswald;
+                                                padding-bottom: 10px;
+
+                                            }
+
+                                            .workContent {
+                                                font: 600 15px/20px @openSans;
+                                            }
+
+                                            .view-div {
+
+                                                position: relative;
+                                                right: 20px;
+
+                                                a {
+
+                                                    text-decoration-color: #0099D8;
+
+                                                    .rightArrow {
+                                                        position: relative;
+                                                        top: 10px;
+                                                        color: #0099D8;
+                                                        transform: rotate(270deg);
+                                                        left: 9px;
+                                                        font-size: 29px;
+
+                                                    }
+
+                                                    .viewService {
+                                                        font: 600 14px/14px @openSans;
+                                                        color: #0099D8;
+
+                                                    }
+
+                                                }
+                                            }
+
+                                        }
+
+
+
+
+                                    }
+
+                                    .caseStudy {
+                                        max-width: 355px;
+                                        position: unset;
+
+                                        .details {
+                                            position: unset;
+
+                                            .workTitle {
+                                                padding-top: 30px;
+                                            }
+
+                                            .workContent {
+                                                max-width: 320px;
+                                            }
+
+                                            .view-div {
+                                                position: relative;
+                                                bottom: 17px;
+                                            }
+                                        }
+
+
+
+
+                                    }
+
+                                    .ourWork {
+                                        max-width: 355px;
+                                        position: unset;
+
+                                        .details {
+                                            position: unset;
+
+                                            .workTitle {
+                                                padding-top: 20px;
+
+                                            }
+
+                                            .workContent {
+                                                max-width: 320px;
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+
+                            .hover-work-footer {
+
+                                position: relative;
+
+                                .work-footer-div {
+                                    width: 1158px;
+                                    height: 10px;
+                                    background-color: #0099D8;
+                                    position: absolute;
+                                    top: 11px;
+
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                .workShow {
+                    display: block;
+                }
             }
         }
     }
+}
+
+
+// media query for laptop
+
+@media screen and (max-width:1024px) {
+
+    body {
+
+        .main-container {
+            .outer-main-container {
+                .header {
+                    .header-div {
+                        .nav-section {
+                            position: relative;
+
+                            .cancelIcon {
+                                display: block;
+                                position: absolute;
+                                left: 20px;
+                                top: 22px;
+                            }
+
+                            .logo {
+                                padding: 18px 0px 10px 66px;
+                            }
+                        }
+
+                        .topSide-header {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width:1025px) and(max-width:1365px) {
+
+
+    body {
+
+        .main-container {
+            .outer-main-container {
+                .header {
+                    .header-div {
+                        .nav-section {
+
+                            .cancelIcon {
+                                display: none;
+
+                            }
+
+                            .logo {
+                                padding: 20px 0px 10px 20px;
+                            }
+                        }
+
+
+                        .topSide-header {
+                            padding-left: 0px;
+
+                            .header-menu {
+                                .ulLists {
+                                    padding-top: 15px;
+
+                                    .liLists {
+                                        padding-left: 35px;
+
+                                        a {
+                                            .nav-head {
+                                                font: 800 13px/19px 'Open Sans', 'sans-serif'
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right-nav {
+                                padding-left: 56px;
+
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and(max-width:1024px) {
+
+    body {
+
+        .main-container {
+            .outer-main-container {
+                .header {
+                    .header-div {
+                        flex-direction: column;
+
+                        .nav-section {
+                            position: relative;
+
+                            .cancelIcon {
+                                display: block;
+                                position: absolute;
+                                left: 20px;
+                                top: 22px;
+                            }
+
+                            .logo {
+                                padding: 18px 0px 10px 66px;
+                            }
+                        }
+
+                        .topSide-header {
+                            display: block;
+                            padding-left: 0;
+
+                            .header-menu {
+                                .ulLists {
+                                    display: block;
+
+                                    .liLists {
+                                        a {
+
+                                            .navOne{
+                                                color: @seconday-color;
+                                            }
+                                            .nav-head{
+                                                color: @seconday-color;
+                                            }
+                                            .arrow {
+                                                color: #E3411A;
+                                                position: absolute;
+                                                right: 192px;
+                                                font-size: 30px;
+                                                top: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right-nav {
+                                padding-left: 20px;
+
+                                .inner-right-nav {
+
+                                    flex-direction: column-reverse;
+
+                                    .contactBtn {
+                                        .innerBtn {
+                                            width: 330px;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
 }
