@@ -5,15 +5,7 @@ let hoverSection = document.querySelector(".hover-service-section")
 let hoverWork = document.querySelector(".hoverWork")
 let hoverWorkSection =document.querySelector(".hover-work-section")
 
-// hoverView.addEventListener("mouseover",()=>{
-//     hoverSection.classList.add("show")
-   
-// })
-// hoverSection.addEventListener("mouseout",()=>{
-//     hoverSection.classList.remove("show")
-//     // hoverSection.style.display = "none"
 
-// })
 
 hoverWork.addEventListener("mouseover",()=>{
     hoverWorkSection.classList.add("workShow");
@@ -24,14 +16,12 @@ hoverWork.addEventListener("mouseout",()=>{
 })
 
 
-// hoverView.addEventListener("mouseover", (event) => {
-//     if (event.type === "mouseover") {
-//       hoverSection.classList.add("show");
-//     } else if (event.type === "mouseout") {
-//       hoverSection.classList.remove("show");
-//     }
-//   });
-  
+hoverView.addEventListener("click",()=>{
+    hoverWorkSection.style.display="block"
+})
+
+
+
 
 
 hoverView.addEventListener("mouseover",()=>{
@@ -46,3 +36,28 @@ hoverView.addEventListener("mouseout",()=>{
     hoverSection.style.display="none";
     
 })
+
+ let menuIcon = document.querySelector(".menuIcon");
+ let cancelIcon = document.querySelector(".cancelIcon");
+ let topSide = document.querySelector(".topSide-header");
+ let clickBackground = document.querySelector(".click");
+
+
+ menuIcon.addEventListener("click",()=>{
+
+    cancelIcon.style.display="block";
+    menuIcon.style.display="none";
+    topSide.style.display="block";
+    clickBackground.style.display="block"
+    
+
+ })
+
+ cancelIcon.addEventListener("click",()=>{
+    menuIcon.style.display="block";
+    cancelIcon.style.display="none";
+    topSide.style.display="none";
+
+ })
+
+ 
