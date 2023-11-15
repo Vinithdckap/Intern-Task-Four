@@ -513,16 +513,19 @@ body .main-container .blur {
     max-width: 137px;
   }
   body .main-container .outer-main-container .header .header-div .header-menu .ulLists {
-    margin: 0px 0px;
+    margin: 0px -11px;
   }
   body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists {
-    margin: 0px 15px;
+    margin: 0px 10px;
   }
   body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .navOne {
     font-size: 10px;
   }
   body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .nav-head {
     font: 800 13px/19px 'Open Sans', 'sans-serif';
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .arrow::after {
+    top: 4px;
   }
   body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .tweet .blog-ey {
     font-size: 8px;
@@ -537,28 +540,37 @@ body .main-container .blur {
   body .main-container .inner-content .content-nav .left-nav .main-contents .mainUL .mainLi {
     font-size: 23px;
   }
+  body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div {
+    max-width: 296px;
+  }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div .site-details .problem-title {
-    font-size: 21px;
+    font-size: 19px;
   }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div .site-details .prob-description {
-    font: 500 22px/32px 'Open Sans', 'sans-serif';
+    font: 500 20px/32px 'Open Sans', 'sans-serif';
     font-style: italic;
+  }
+  body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-two {
+    max-width: 296px;
   }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-two .site-details {
     padding: 127px 43px 17px 47px;
   }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-two .site-details .problem-title {
-    font-size: 21px;
+    font-size: 19px;
   }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-two .site-details .prob-description {
-    font: 500 22px/32px 'Open Sans', 'sans-serif';
+    font: 500 20px/32px 'Open Sans', 'sans-serif';
     font-style: italic;
   }
+  body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-three {
+    max-width: 296px;
+  }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-three .site-details .problem-title {
-    font-size: 21px;
+    font-size: 19px;
   }
   body .main-container .inner-content .second-content-container .problem-div .problem-grid .grid-flex .site-div-three .site-details .prob-description {
-    font: 500 22px/32px 'Open Sans', 'sans-serif';
+    font: 500 20px/32px 'Open Sans', 'sans-serif';
     font-style: italic;
   }
 }
@@ -573,17 +585,61 @@ body .main-container .blur {
   body .main-container .outer-main-container .header .header-div .nav-section .menuIcon {
     display: block;
     position: absolute;
+    left: 20px;
     top: 30px;
-    left: 18px;
+  }
+  body .main-container .outer-main-container .header .header-div .nav-section .cancelIcon {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 22px;
   }
   body .main-container .outer-main-container .header .header-div .nav-section .logo {
-    padding: 20px 0px 10px 60px;
+    padding: 18px 0px 10px 66px;
   }
   body .main-container .outer-main-container .header .header-div .header-menu {
     background-image: url(Images/mobile\ background.jpg);
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists {
+    display: block;
+    padding: 25px 0px 40px 0px;
+    text-align: center;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists {
+    padding-left: 0px;
+    padding-top: 20px;
+    width: 100%;
+    padding: 12px 0px;
+    margin: 0px 0px;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .navOne {
+    color: #FFFFFF;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .nav-head {
+    color: #FFFFFF;
+    font-size: 21px;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .lineDiv {
+    display: flex;
+    justify-content: center;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .lineDiv .underLine {
+    width: 40px;
+    height: 4px;
+  }
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .arrow::after {
+    content: "";
+    background-image: url(Images/arrow.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 10px;
+    rotate: 180deg;
+    top: 10px;
+    color: #E3411A;
   }
   body .main-container .outer-main-container .header .header-div .right-nav {
     display: none;
@@ -765,6 +821,9 @@ body .main-container .blur {
   body .main-container .click .content-nav .left-nav .main-contents .qouteBtn {
     margin-top: 37px;
     margin-left: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body .main-container .click .content-nav .left-nav .main-contents .qouteBtn .btnQuote {
     height: 59px;

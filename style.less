@@ -792,7 +792,8 @@ body {
 
 
         }
-        .blur{
+
+        .blur {
             display: none;
             max-width: 1440px;
             width: 100%;
@@ -958,10 +959,10 @@ body {
                         .header-menu {
                             .ulLists {
 
-                                margin: 0px 0px;
+                                margin: 0px -11px;
 
                                 .liLists {
-                                    margin: 0px 15px;
+                                    margin: 0px 10px;
 
 
                                     a {
@@ -973,7 +974,13 @@ body {
                                         .nav-head {
                                             font: 800 13px/19px 'Open Sans', 'sans-serif'
                                         }
+
+                                        .arrow::after {
+                                            top: 4px;
+
+                                        }
                                     }
+
                                 }
                             }
                         }
@@ -1031,14 +1038,16 @@ body {
                             .grid-flex {
                                 .site-div {
 
+                                    max-width: 296px;
+
                                     .site-details {
 
                                         .problem-title {
-                                            font-size: 21px;
+                                            font-size: 19px;
                                         }
 
                                         .prob-description {
-                                            font: 500 22px/32px 'Open Sans', 'sans-serif';
+                                            font: 500 20px/32px 'Open Sans', 'sans-serif';
                                             font-style: italic;
                                         }
                                     }
@@ -1046,16 +1055,17 @@ body {
                                 }
 
                                 .site-div-two {
+                                    max-width: 296px;
 
                                     .site-details {
                                         padding: 127px 43px 17px 47px;
 
                                         .problem-title {
-                                            font-size: 21px;
+                                            font-size: 19px;
                                         }
 
                                         .prob-description {
-                                            font: 500 22px/32px 'Open Sans', 'sans-serif';
+                                            font: 500 20px/32px 'Open Sans', 'sans-serif';
                                             font-style: italic;
 
                                         }
@@ -1065,15 +1075,17 @@ body {
                                 }
 
                                 .site-div-three {
+                                    max-width: 296px;
+
 
                                     .site-details {
 
                                         .problem-title {
-                                            font-size: 21px;
+                                            font-size: 19px;
                                         }
 
                                         .prob-description {
-                                            font: 500 22px/32px 'Open Sans', 'sans-serif';
+                                            font: 500 20px/32px 'Open Sans', 'sans-serif';
                                             font-style: italic;
 
                                         }
@@ -1103,8 +1115,6 @@ body {
         .main-container {
             .outer-main-container {
 
-
-
                 .header {
                     .header-div {
                         display: unset;
@@ -1116,29 +1126,103 @@ body {
                             .menuIcon {
                                 display: block;
                                 position: absolute;
+                                left: 20px;
                                 top: 30px;
-                                left: 18px;
+                            }
+
+                            .cancelIcon {
+                                display: none;
+                                position: absolute;
+                                left: 20px;
+                                top: 22px;
                             }
 
                             .logo {
-                                padding: 20px 0px 10px 60px;
+                                padding: 18px 0px 10px 66px;
                             }
                         }
 
+                        // .header-menu {
+                        //     background-image: url(./Images/mobile\ background.jpg);
+                        //     background-repeat: no-repeat;
+                        //     width: 100%;
+                        //     background-size: cover;
+
+
+                        // }
+
+
+
                         .header-menu {
                             background-image: url(./Images/mobile\ background.jpg);
-                            background-repeat: no-repeat;
-                            width: 100%;
-                            background-size: cover;
+
+                                background-repeat: no-repeat;
+                                width: 100%;
+                                background-size: cover;
+                            .ulLists {
+                                display: block;
+                                padding: 25px 0px 40px 0px;
+                                text-align: center;
 
 
+                                .liLists {
+                                    padding-left: 0px;
+                                    padding-top: 20px;
+                                    width: 100%;
+
+                                    padding: 12px 0px;
+                                    margin: 0px 0px;
+
+
+
+                                    a {
+
+                                        .navOne {
+                                            color: @seconday-color;
+                                        }
+
+                                        .nav-head {
+                                            color: @seconday-color;
+                                            font-size: 21px;
+
+                                        }
+
+                                        .lineDiv {
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .underLine {
+                                                width: 40px;
+                                                height: 4px;
+
+                                            }
+                                        }
+
+                                        .arrow::after {
+                                            content: "";
+                                            background-image: url(./Images/arrow.png);
+                                            position: absolute;
+                                            background-repeat: no-repeat;
+                                            width: 20px;
+                                            height: 10px;
+                                            rotate: 180deg;
+                                            top: 10px;
+                                            color: #E3411A;
+
+                                        }
+                                    }
+                                }
+                            }
                         }
+
 
                         .right-nav {
                             display: none;
                         }
                     }
                 }
+
+
             }
 
             .inner-content {
@@ -1300,15 +1384,6 @@ body {
                             }
                         }
 
-
-                        // display: none;
-                        // background-image: url(./Images/mobile\ background.jpg);
-                        // background-size: cover;
-                        // background-position: center;
-                        // width: 100%;
-                        // height: 500px;
-
-                        // display: block;
                         padding-left: 0;
 
                         .header-menu {
@@ -1361,7 +1436,7 @@ body {
                                             rotate: 180deg;
                                             top: 10px;
                                             color: #E3411A;
-    
+
                                         }
                                     }
                                 }
@@ -1454,6 +1529,9 @@ body {
                             .qouteBtn {
                                 margin-top: 37px;
                                 margin-left: 27px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
 
                                 .btnQuote {
                                     height: 59px;
