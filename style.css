@@ -65,71 +65,88 @@ body .main-container .outer-main-container .header .header-div .nav-section .can
 body .main-container .outer-main-container .header .header-div .nav-section .logo {
   padding: 20px 0px 10px 30px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents {
-  display: flex;
-}
 @media screen and (max-width: 1023px) {
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu {
+  body .main-container .outer-main-container .header .header-div .header-menu {
     display: none;
   }
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists {
   display: flex;
   margin: 0px -30px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists {
   list-style: none;
   position: relative;
-  padding: 13px 12px;
-  margin: 0px 30px;
+  padding: 13px 20px;
+  margin: 0px 20px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists:hover {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists:hover {
   background-color: black;
   color: #FFFFFF;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a {
   text-decoration: none;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .navOne {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .navOne {
   font: 600 12px/17px 'Open Sans', 'sans-serif';
   color: black;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .nav-head {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .nav-head {
   font: 800 18px/24px 'Open Sans', 'sans-serif';
   color: black;
+  position: relative;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .arrow {
-  color: #E3411A;
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .arrow::after {
+  content: "";
+  background-image: url(Images/arrow.png);
   position: absolute;
-  right: -6px;
-  font-size: 27px;
-  top: 30px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 10px;
+  rotate: 180deg;
+  top: 10px;
+  color: #E3411A;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .underLine {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .underLine {
   background-color: #0099D8;
   display: block;
   width: 30px;
   height: 3px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .subMenu-mobile {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists .sub-menu {
+  background-color: white;
+  height: 200px;
   display: none;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists:hover {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists .sub-menu .mobileUl {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 35px;
+}
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists .sub-menu .mobileUl .mobileLi {
+  font: 500 20px/22px Oswald, sans-serif;
+  color: black;
+}
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists .sub-menu.open {
+  display: block;
+}
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists:hover {
   background-color: black;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists:hover a > * {
+body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists:hover a > * {
   color: #FFFFFF;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav {
+body .main-container .outer-main-container .header .header-div .right-nav {
   display: flex;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 23px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .tweet {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .tweet {
   background-image: url(Images/Tweet\ btn.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -138,21 +155,21 @@ body .main-container .outer-main-container .header .header-div .headerContents .
   height: 33px;
   margin-top: 11px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .tweet .blog-ey {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .tweet .blog-ey {
   font: 800 12px/17px 'Open Sans', 'sans-serif';
   color: #FFFFFF;
   padding-top: 4px;
   text-align: center;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .contactBtn {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn {
   position: relative;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .contactBtn .headsetIcon {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn .headsetIcon {
   position: absolute;
   top: 10px;
   left: 15px;
 }
-body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .contactBtn .innerBtn {
+body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn .innerBtn {
   width: 120px;
   height: 38px;
   border-radius: 19px;
@@ -473,6 +490,16 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
   position: absolute;
   top: 11px;
 }
+body .main-container .blur {
+  display: none;
+  max-width: 1440px;
+  width: 100%;
+  height: 70pc;
+  opacity: 0.7;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+}
 @media screen and (min-width: 1024px) and (max-width: 1365px) {
   body .main-container .outer-main-container .header .header-div .nav-section .menuIcon {
     display: none;
@@ -552,20 +579,14 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
   body .main-container .outer-main-container .header .header-div .nav-section .logo {
     padding: 20px 0px 10px 60px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents {
-    display: none;
+  body .main-container .outer-main-container .header .header-div .header-menu {
     background-image: url(Images/mobile\ background.jpg);
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
-    height: 520px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu {
-    display: block;
-  }
-  body .main-container .outer-main-container .header .header-div .headerContents .right-nav {
-    display: flex;
-    justify-content: center;
+  body .main-container .outer-main-container .header .header-div .right-nav {
+    display: none;
   }
   body .main-container .inner-content .content-nav .left-nav .inner-nav .bulb {
     padding: 60px 0px 60px 30px;
@@ -648,50 +669,54 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
   body .main-container .outer-main-container .header .header-div .nav-section .logo {
     padding: 18px 0px 10px 66px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists {
     display: block;
     padding: 25px 0px 40px 0px;
     text-align: center;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists {
     padding-left: 0px;
     padding-top: 20px;
     width: 100%;
     padding: 12px 0px;
     margin: 0px 0px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .navOne {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .navOne {
     color: #FFFFFF;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .nav-head {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .nav-head {
     color: #FFFFFF;
     font-size: 21px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .lineDiv {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .lineDiv {
     display: flex;
     justify-content: center;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .lineDiv .underLine {
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .lineDiv .underLine {
     width: 40px;
     height: 4px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .header-menu .ulLists .liLists a .arrow {
-    color: #E3411A;
+  body .main-container .outer-main-container .header .header-div .header-menu .ulLists .liLists a .arrow::after {
+    content: "";
+    background-image: url(Images/arrow.png);
     position: absolute;
-    right: 4px;
-    font-size: 30px;
-    top: 36px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 10px;
+    rotate: 180deg;
+    top: 10px;
+    color: #E3411A;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .right-nav {
-    padding-left: 6px;
+  body .main-container .outer-main-container .header .header-div .right-nav {
+    padding-left: 20px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav {
+  body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav {
     flex-direction: column-reverse;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .contactBtn .headsetIcon {
+  body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn .headsetIcon {
     left: 120px;
   }
-  body .main-container .outer-main-container .header .header-div .headerContents .right-nav .inner-right-nav .contactBtn .innerBtn {
+  body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn .innerBtn {
     width: 330px;
   }
   body .main-container .click {

@@ -8,6 +8,8 @@ let innerContainer = document.querySelector(".inner-content");
 let hoverWork = document.querySelector(".hoverWork");
 let hoverWorkSection = document.querySelector(".hover-work-section")
 
+let blurDiv =document.querySelector(".blur")
+
 
 
 // console.log(innerContainer);
@@ -17,13 +19,14 @@ let hoverWorkSection = document.querySelector(".hover-work-section")
 
 hoverView.addEventListener("mouseover", () => {
    hoverSection.style.display = "block";
-   // innerContainer.style.opacity = "20%"
+   hoverSection.style.zIndex = "1"
+   blurDiv.style.display ="block"
 
 
 })
 hoverView.addEventListener("mouseout", () => {
    hoverSection.style.display = "none"
-   // innerContainer.style.opacity = "100%"
+   blurDiv.style.display ="none"
 
 })
 hoverSection.addEventListener("mouseover", () => {
@@ -34,20 +37,23 @@ hoverSection.addEventListener("mouseout", () => {
 })
 
 
-hoverWork.addEventListener("mouseover",()=>{
+hoverWork.addEventListener("mouseover", () => {
    hoverWorkSection.style.display = "block";
+   hoverWorkSection.style.zIndex = "1"
+   blurDiv.style.display ="block"
 });
 
-hoverWork.addEventListener("mouseout",()=>{
+hoverWork.addEventListener("mouseout", () => {
    hoverWorkSection.style.display = "none";
+   blurDiv.style.display ="none"
 })
 
 
-hoverWorkSection.addEventListener("mouseover",()=>{
+hoverWorkSection.addEventListener("mouseover", () => {
    hoverWorkSection.style.display = "block"
 });
 
-hoverWorkSection.addEventListener("mouseout",()=>{
+hoverWorkSection.addEventListener("mouseout", () => {
    hoverWorkSection.style.display = "none"
 });
 
@@ -59,22 +65,28 @@ hoverWorkSection.addEventListener("mouseout",()=>{
 
 let menuIcon = document.querySelector(".menuIcon");
 let cancelIcon = document.querySelector(".cancelIcon");
-let headerMobile = document.querySelector(".headerContents");
-let subMenu = document.querySelector(".subMenu-mobile");
+let headerMobile = document.querySelector(".header-menu");
+let subMenu = document.querySelector(".sub-menu");
 
-menuIcon.addEventListener("click",()=>{
+menuIcon.addEventListener("click", () => {
 
-   cancelIcon.style.display="block";
-   menuIcon.style.display="none";
-   headerMobile.style.display="block";
+   cancelIcon.style.display = "block";
+   menuIcon.style.display = "none";
+   headerMobile.style.display = "block";
 
 })
 
-cancelIcon.addEventListener("click",()=>{
-   menuIcon.style.display="block";
-   cancelIcon.style.display="none"
-   headerMobile.style.display="none"; 
-   
+cancelIcon.addEventListener("click", () => {
+   menuIcon.style.display = "block";
+   cancelIcon.style.display = "none"
+   headerMobile.style.display = "none";
+
+})
+
+hoverWork.addEventListener("click", () => {
+
+   subMenu.classList.toggle("open");
+
 })
 
 
