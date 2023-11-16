@@ -6,39 +6,45 @@
 
 
 @font-face {
-    font-family: 'Open sans', 'sans-serif';
-    src: url(./Fonts/OpenSans/OpenSans-SemiBold.ttf);
+    font-family: 'Open sans';
+    src: url('./Fonts/OpenSans/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+
 }
 
 @font-face {
-    font-family: 'Open sans', 'sans-serif';
-    src: url(./Fonts/OpenSans/OpenSans-ExtraBold.ttf);
+    font-family: 'Open sans';
+    src: url('./Fonts/OpenSans/OpenSans-ExtraBold.ttf');
+    font-weight: 800;
+
 }
 
 @font-face {
-    font-family: 'Open sans', 'sans-serif';
-    src: url(./Fonts/OpenSans/OpenSans-Bold.ttf);
+    font-family: 'Open sans';
+    src: url('./Fonts/OpenSans/OpenSans-Bold.ttf');
+    font-weight: 700;
+
 }
 
 @font-face {
-    font-family: 'Oswald', 'sans-serif';
-    src: url(./Fonts/Oswald/Oswald-Medium.ttf);
+    font-family: 'Oswald';
+    src: url('./Fonts/Oswald/Oswald-Medium.ttf');
     font-display: swap;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 @font-face {
     font-family: 'Gotham Ultra';
     src: url("./Fonts/Gotham/Gotham-UltraItalic.otf") format("truetype");
     font-display: swap;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'Gotham Medium';
     src: url("./Fonts/Gotham/GothamMedium.ttf") format("truetype");
     font-display: swap;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 @font-face {
@@ -51,7 +57,7 @@
 
 
 @openSans: 'Open Sans', 'sans-serif';
-@oswald: Oswald, sans-serif;
+@oswald: ' Oswald', sans-serif;
 @gotham :'Gotham Ultra', sans-serif;
 @gothamBlack :'Gotham Black', sans-serif;
 
@@ -69,6 +75,9 @@ body {
 
     .main-container {
         .outer-main-container {
+
+
+
             .header {
 
 
@@ -81,9 +90,11 @@ body {
 
                 .header-div {
                     height: 70px;
-                    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                    box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.16);
                     display: flex;
                     justify-content: space-around;
+                    max-width: 1440px;
+                    margin: 0 auto;
 
                     .nav-section {
 
@@ -109,6 +120,8 @@ body {
                     // padding-left: 103px;
 
 
+
+                    // .topSide-header{
 
                     .header-menu {
                         @media screen and (max-width:1023px) {
@@ -215,9 +228,9 @@ body {
 
                                 }
 
-                                .sub-menu.open {
-                                    display: block;
-                                }
+                                // .sub-menu.open {
+                                //     display: block;
+                                // }
 
 
                             }
@@ -294,7 +307,12 @@ body {
                         }
                     }
 
+                    .topSide-header {
+                        display: none;
+                    }
+
                     // }
+
 
 
 
@@ -318,6 +336,8 @@ body {
                 .left-nav {
 
                     display: flex;
+                    max-width: 1440px;
+                    margin: 0 auto;
 
                     .inner-nav {
                         .bulb {
@@ -519,7 +539,11 @@ body {
                     background-color: @seconday-color;
                     height: 420px;
                     position: absolute;
-                    right: 261px;
+                    right: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    top: 208px;
+
 
 
                     .inner-grid {
@@ -529,6 +553,8 @@ body {
                             display: grid;
                             grid-template-columns: 1fr 1fr 1fr;
                             row-gap: 50px;
+                            column-gap: 18px;
+
 
                             .li-grids {
                                 list-style: none;
@@ -548,13 +574,15 @@ body {
 
                                         .img-grid {
                                             width: 48px;
+                                            height: auto;
+
                                         }
 
 
                                         .title-grid {
                                             .title-div {
                                                 padding-left: 8px;
-                                                font: 500 20px/18px @oswald;
+                                                font: 500 20px/24px @oswald;
                                                 letter-spacing: -1px;
                                                 color: @primary-color;
                                                 // -webkit-text-stroke: 1px #707070;
@@ -598,22 +626,23 @@ body {
                         a {
                             text-align: center;
                             padding-top: 50px;
-                            text-decoration-color: #707070;
+                            text-decoration-color: #0099D8;
 
 
                             .rightArrow {
                                 position: relative;
                                 top: 6px;
                                 color: #0099D8;
-                                -webkit-text-stroke: 1px #707070;
+                                // -webkit-text-stroke: 1px #707070;
                                 transform: rotate(270deg);
+                                left: 8px;
 
                             }
 
                             .viewService {
                                 font: 600 14px/14px @openSans;
                                 color: #0099D8;
-                                -webkit-text-stroke: 1px #707070;
+                                // -webkit-text-stroke: 1px #707070;
 
                             }
 
@@ -645,11 +674,17 @@ body {
             // work hover container details
             .hover-work-section {
                 display: none;
-                position: absolute;
-                right: 120px;
+                position: relative;
+                z-index: 999;
+                // right: 120px;
                 border-top: 1px solid #707070;
 
+
                 .outer-work-container {
+                    position: fixed;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
 
 
                     display: flex;
@@ -693,6 +728,7 @@ body {
 
                                             position: relative;
                                             right: 20px;
+                                            top: 18px;
 
                                             a {
 
@@ -728,6 +764,8 @@ body {
                                     max-width: 355px;
                                     position: unset;
 
+
+
                                     .details {
                                         position: unset;
 
@@ -741,7 +779,8 @@ body {
 
                                         .view-div {
                                             position: relative;
-                                            bottom: 17px;
+                                            top: 0px;
+
                                         }
                                     }
 
@@ -754,6 +793,9 @@ body {
                                     max-width: 355px;
                                     position: unset;
 
+
+
+
                                     .details {
                                         position: unset;
 
@@ -764,6 +806,10 @@ body {
 
                                         .workContent {
                                             max-width: 320px;
+                                        }
+
+                                        .view-div {
+                                            top: 20px;
                                         }
                                     }
                                 }
@@ -776,7 +822,7 @@ body {
                             position: relative;
 
                             .work-footer-div {
-                                width: 1158px;
+                                width: 100%;
                                 height: 10px;
                                 background-color: #0099D8;
                                 position: absolute;
@@ -795,7 +841,7 @@ body {
 
         .blur {
             display: none;
-            max-width: 1440px;
+            max-width: 100%;
             width: 100%;
             height: 70pc;
             opacity: 0.7;
@@ -1015,6 +1061,55 @@ body {
 
 
             .inner-content {
+
+
+
+                .hover-work-section {
+                    .outer-work-container {
+                        .inner-work-section {
+                            .ourWorks {
+                                .workDiv {
+                                    justify-content: center;
+                                    column-gap: 30px;
+                                    margin-left: 20px;
+
+                                    .portfolioDiv {
+                                        .portImg {
+                                            .imgPort {
+                                                width: 100%;
+                                                height: auto;
+                                                max-width: 256px;
+
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            .hover-work-footer{
+                                .work-footer-div{
+                                    top: 66px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 .content-nav {
                     .left-nav {
                         .main-contents {
@@ -1126,19 +1221,20 @@ body {
                             .menuIcon {
                                 display: block;
                                 position: absolute;
-                                left: 20px;
                                 top: 30px;
+                                left: 18px;
                             }
 
                             .cancelIcon {
-                                display: none;
+
                                 position: absolute;
                                 left: 20px;
                                 top: 22px;
+
                             }
 
                             .logo {
-                                padding: 18px 0px 10px 66px;
+                                padding: 20px 0px 10px 60px;
                             }
                         }
 
@@ -1151,74 +1247,162 @@ body {
 
                         // }
 
-
-
                         .header-menu {
-                            background-image: url(./Images/mobile\ background.jpg);
-
-                                background-repeat: no-repeat;
-                                width: 100%;
-                                background-size: cover;
-                            .ulLists {
-                                display: block;
-                                padding: 25px 0px 40px 0px;
-                                text-align: center;
+                            display: none;
 
 
-                                .liLists {
-                                    padding-left: 0px;
-                                    padding-top: 20px;
-                                    width: 100%;
-
-                                    padding: 12px 0px;
-                                    margin: 0px 0px;
+                            // .sub-menu {
+                            //     background-color: white;
+                            //     height: 200px;
+                            //     display: none;
 
 
+                            //     .mobileUl {
 
-                                    a {
+                            //         display: flex;
+                            //         flex-direction: column;
+                            //         gap: 30px;
+                            //         padding-top: 35px;
 
-                                        .navOne {
-                                            color: @seconday-color;
-                                        }
 
-                                        .nav-head {
-                                            color: @seconday-color;
-                                            font-size: 21px;
+                            //         .mobileLi {
+                            //             font: 500 20px/22px @oswald;
+                            //             color: @primary-color;
 
-                                        }
+                            //         }
+                            //     }
 
-                                        .lineDiv {
-                                            display: flex;
-                                            justify-content: center;
-
-                                            .underLine {
-                                                width: 40px;
-                                                height: 4px;
-
-                                            }
-                                        }
-
-                                        .arrow::after {
-                                            content: "";
-                                            background-image: url(./Images/arrow.png);
-                                            position: absolute;
-                                            background-repeat: no-repeat;
-                                            width: 20px;
-                                            height: 10px;
-                                            rotate: 180deg;
-                                            top: 10px;
-                                            color: #E3411A;
-
-                                        }
-                                    }
-                                }
-                            }
+                            // }
                         }
-
 
                         .right-nav {
                             display: none;
                         }
+
+
+                        .topSide-header {
+                            background-image: url(./Images/mobile\ background.jpg);
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            background-size: cover;
+
+                            .header-menu {
+                                display: block;
+
+                                .ulLists {
+                                    display: block;
+                                    padding: 25px 0px 40px 0px;
+                                    text-align: center;
+
+
+                                    .liLists {
+                                        padding-left: 0px;
+                                        padding-top: 20px;
+                                        width: 100%;
+
+                                        padding: 12px 0px;
+                                        margin: 0px 0px;
+
+
+
+                                        a {
+
+                                            .navOne {
+                                                color: @seconday-color;
+                                            }
+
+                                            .nav-head {
+                                                color: @seconday-color;
+                                                font-size: 21px;
+
+                                            }
+
+                                            .lineDiv {
+                                                display: flex;
+                                                justify-content: center;
+
+                                                .underLine {
+                                                    width: 40px;
+                                                    height: 4px;
+
+                                                }
+                                            }
+
+                                            .arrow::after {
+                                                content: "";
+                                                background-image: url(./Images/arrow.png);
+                                                position: absolute;
+                                                background-repeat: no-repeat;
+                                                width: 20px;
+                                                height: 10px;
+                                                rotate: 180deg;
+                                                top: 10px;
+                                                color: #E3411A;
+
+                                            }
+
+                                        }
+
+                                        .sub-menu {
+                                            background-color: white;
+                                            height: 200px;
+                                            display: none;
+                                            // display: block;
+
+
+                                            .mobileUl {
+
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 30px;
+                                                padding-top: 35px;
+
+
+                                                .mobileLi {
+                                                    font: 500 20px/22px @oswald;
+                                                    color: @primary-color;
+
+                                                }
+                                            }
+
+                                        }
+
+                                        .opens {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            .right-nav {
+                                display: block;
+                                padding-bottom: 20px;
+
+
+                                .inner-right-nav {
+                                    flex-direction: column-reverse;
+
+                                    .contactBtn {
+                                        padding-right: 19px;
+
+                                        .headsetIcon {
+                                            left: 120px;
+                                        }
+
+                                        .innerBtn {
+                                            width: 330px;
+                                        }
+
+                                    }
+                                }
+
+
+
+                            }
+                        }
+
+
                     }
                 }
 
@@ -1386,84 +1570,123 @@ body {
 
                         padding-left: 0;
 
-                        .header-menu {
-                            .ulLists {
-                                display: block;
-                                padding: 25px 0px 40px 0px;
-                                text-align: center;
+
+                        .topSide-header {
+                            .header-menu {
+                                .ulLists {
+                                    display: block;
+                                    padding: 25px 0px 40px 0px;
+                                    text-align: center;
 
 
-                                .liLists {
-                                    padding-left: 0px;
-                                    padding-top: 20px;
-                                    width: 100%;
+                                    .liLists {
+                                        padding-left: 0px;
+                                        padding-top: 20px;
+                                        width: 100%;
 
-                                    padding: 12px 0px;
-                                    margin: 0px 0px;
+                                        padding: 12px 0px;
+                                        margin: 0px 0px;
 
 
 
-                                    a {
+                                        a {
 
-                                        .navOne {
-                                            color: @seconday-color;
-                                        }
+                                            .navOne {
+                                                color: @seconday-color;
+                                            }
 
-                                        .nav-head {
-                                            color: @seconday-color;
-                                            font-size: 21px;
+                                            .nav-head {
+                                                color: @seconday-color;
+                                                font-size: 21px;
 
-                                        }
+                                            }
 
-                                        .lineDiv {
-                                            display: flex;
-                                            justify-content: center;
+                                            .lineDiv {
+                                                display: flex;
+                                                justify-content: center;
 
-                                            .underLine {
-                                                width: 40px;
-                                                height: 4px;
+                                                .underLine {
+                                                    width: 40px;
+                                                    height: 4px;
+
+                                                }
+                                            }
+
+                                            .arrow::after {
+                                                content: "";
+                                                background-image: url(./Images/arrow.png);
+                                                position: absolute;
+                                                background-repeat: no-repeat;
+                                                width: 20px;
+                                                height: 10px;
+                                                rotate: 180deg;
+                                                top: 10px;
+                                                color: #E3411A;
 
                                             }
                                         }
 
-                                        .arrow::after {
-                                            content: "";
-                                            background-image: url(./Images/arrow.png);
-                                            position: absolute;
-                                            background-repeat: no-repeat;
-                                            width: 20px;
-                                            height: 10px;
-                                            rotate: 180deg;
-                                            top: 10px;
-                                            color: #E3411A;
+                                        .sub-menu {
+                                            background-color: white;
+                                            height: 200px;
+                                            display: none;
+
+
+                                            .mobileUl {
+
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 30px;
+                                                padding-top: 35px;
+
+
+                                                .mobileLi {
+                                                    font: 500 20px/22px @oswald;
+                                                    color: @primary-color;
+
+                                                }
+                                            }
+
+                                        }
+
+                                        .opens {
+                                            display: block;
+                                        }
+
+                                        // .sub-menu .open {
+                                        //     display: block;
+                                        // }
+
+
+
+                                    }
+                                }
+                            }
+
+                            .right-nav {
+                                padding-left: 20px;
+
+                                .inner-right-nav {
+
+                                    flex-direction: column-reverse;
+
+                                    .contactBtn {
+
+                                        .headsetIcon {
+                                            left: 120px;
+
+                                        }
+
+                                        .innerBtn {
+                                            width: 330px;
 
                                         }
                                     }
                                 }
                             }
+
                         }
 
-                        .right-nav {
-                            padding-left: 20px;
-
-                            .inner-right-nav {
-
-                                flex-direction: column-reverse;
-
-                                .contactBtn {
-
-                                    .headsetIcon {
-                                        left: 120px;
-
-                                    }
-
-                                    .innerBtn {
-                                        width: 330px;
-
-                                    }
-                                }
-                            }
-                        }
 
                     }
                 }
