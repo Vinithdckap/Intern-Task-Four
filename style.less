@@ -573,15 +573,21 @@ body {
                                         align-items: center;
 
                                         .img-grid {
-                                            width: 48px;
-                                            height: auto;
+
+                                            .serviceImg {
+                                                width: 48px;
+                                                height: auto;
+
+                                            }
+
+
 
                                         }
 
 
                                         .title-grid {
                                             .title-div {
-                                                padding-left: 8px;
+                                                padding-left:10px;
                                                 font: 500 20px/24px @oswald;
                                                 letter-spacing: -1px;
                                                 color: @primary-color;
@@ -683,8 +689,8 @@ body {
                 .outer-work-container {
                     position: fixed;
                     left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
+                    top: 70px;
+                    transform: translate(-50%);
 
 
                     display: flex;
@@ -692,7 +698,7 @@ body {
 
                     .inner-work-section {
                         width: 1158px;
-                        height: 429px;
+                        height: 418px;
                         background: @seconday-color;
 
                         .ourWorks {
@@ -706,17 +712,33 @@ body {
                                 .portfolioDiv {
                                     max-width: 328px;
                                     position: relative;
+                                    display: flex;
+                                    flex-direction: column;
+                                    row-gap: 10px;
+
+
+                                    .portImg {
+
+                                        .imgPort {
+                                            width: auto;
+                                            height: 200px;
+                                        }
+
+                                    }
 
 
                                     .details {
 
-                                        position: absolute;
-                                        bottom: 18px;
+                                        // position: static;
+                                        // bottom: 18px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        row-gap: 10px;
 
 
                                         .workTitle {
                                             font: 500 28px/22px @oswald;
-                                            padding-bottom: 10px;
+                                            // padding-bottom: 10px;
 
                                         }
 
@@ -764,13 +786,22 @@ body {
                                     max-width: 355px;
                                     position: unset;
 
+                                    .portImg {
+
+                                        .imgPort {
+                                            width: auto;
+                                            height: 200px;
+                                        }
+
+                                    }
+
 
 
                                     .details {
                                         position: unset;
 
                                         .workTitle {
-                                            padding-top: 30px;
+                                            // padding-top: 30px;
                                         }
 
                                         .workContent {
@@ -794,13 +825,21 @@ body {
                                     position: unset;
 
 
+                                    .portImg {
+
+                                        .imgPort {
+                                            width: auto;
+                                            height: 200px;
+                                        }
+
+                                    }
 
 
                                     .details {
                                         position: unset;
 
                                         .workTitle {
-                                            padding-top: 20px;
+                                            // padding-top: 20px;
 
                                         }
 
@@ -1066,6 +1105,11 @@ body {
 
                 .hover-work-section {
                     .outer-work-container {
+                        position: fixed;
+                        left: 50%;
+                        top: 70px;
+                        transform: translate(-50%);
+
                         .inner-work-section {
                             .ourWorks {
                                 .workDiv {
@@ -1087,8 +1131,8 @@ body {
                                 }
                             }
 
-                            .hover-work-footer{
-                                .work-footer-div{
+                            .hover-work-footer {
+                                .work-footer-div {
                                     top: 66px;
                                 }
                             }

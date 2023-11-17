@@ -362,12 +362,12 @@ body .main-container .inner-content .hover-service-section .grid-container .inne
   display: flex;
   align-items: center;
 }
-body .main-container .inner-content .hover-service-section .grid-container .inner-grid .ul-grids .li-grids a .grid-contents .img-grid {
+body .main-container .inner-content .hover-service-section .grid-container .inner-grid .ul-grids .li-grids a .grid-contents .img-grid .serviceImg {
   width: 48px;
   height: auto;
 }
 body .main-container .inner-content .hover-service-section .grid-container .inner-grid .ul-grids .li-grids a .grid-contents .title-grid .title-div {
-  padding-left: 8px;
+  padding-left: 10px;
   font: 500 20px/24px ' Oswald', sans-serif;
   letter-spacing: -1px;
   color: black;
@@ -416,14 +416,14 @@ body .main-container .inner-content .hover-work-section {
 body .main-container .inner-content .hover-work-section .outer-work-container {
   position: fixed;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 70px;
+  transform: translate(-50%);
   display: flex;
   justify-content: center;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section {
   width: 1158px;
-  height: 429px;
+  height: 418px;
   background: #FFFFFF;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv {
@@ -434,14 +434,21 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .portfolioDiv {
   max-width: 328px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .portfolioDiv .portImg .imgPort {
+  width: auto;
+  height: 200px;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .portfolioDiv .details {
-  position: absolute;
-  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .portfolioDiv .details .workTitle {
   font: 500 28px/22px ' Oswald', sans-serif;
-  padding-bottom: 10px;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .portfolioDiv .details .workContent {
   font: 600 15px/20px 'Open Sans', 'sans-serif';
@@ -470,11 +477,12 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
   max-width: 355px;
   position: unset;
 }
+body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .caseStudy .portImg .imgPort {
+  width: auto;
+  height: 200px;
+}
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .caseStudy .details {
   position: unset;
-}
-body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .caseStudy .details .workTitle {
-  padding-top: 30px;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .caseStudy .details .workContent {
   max-width: 320px;
@@ -487,11 +495,12 @@ body .main-container .inner-content .hover-work-section .outer-work-container .i
   max-width: 355px;
   position: unset;
 }
+body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .ourWork .portImg .imgPort {
+  width: auto;
+  height: 200px;
+}
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .ourWork .details {
   position: unset;
-}
-body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .ourWork .details .workTitle {
-  padding-top: 20px;
 }
 body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv .ourWork .details .workContent {
   max-width: 320px;
@@ -552,6 +561,12 @@ body .main-container .blur {
   body .main-container .outer-main-container .header .header-div .right-nav .inner-right-nav .contactBtn .innerBtn {
     width: 97px;
     font-size: 14px;
+  }
+  body .main-container .inner-content .hover-work-section .outer-work-container {
+    position: fixed;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%);
   }
   body .main-container .inner-content .hover-work-section .outer-work-container .inner-work-section .ourWorks .workDiv {
     justify-content: center;
