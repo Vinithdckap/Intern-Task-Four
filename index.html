@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,6 +31,105 @@
 
                     <!-- <div class="topSide-header"> -->
 
+                    <div class="header-menu">
+                        <ul class="ulLists">
+                            <li class="liLists">
+                                <a href="#">
+                                    <span class="navOne">BRANDING & SITE</span>
+                                    <h1 class="nav-head">DESIGN</h1>
+                                    <div class="lineDiv">
+                                        <span class="underLine"></span>
+
+                                    </div>
+                                </a>
+                            </li>
+
+
+                            <li class="liLists">
+                                <a href="#">
+                                    <span class="navOne"> DIGITAL</span>
+                                    <h1 class="nav-head">MARKETING</h1>
+                                    <div class="lineDiv">
+                                        <span class="underLine"></span>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="liLists">
+                                <a href="#">
+                                    <span class="navOne"> STORE</span>
+                                    <h1 class="nav-head">MAINTENANCE </h1>
+                                    <div class="lineDiv">
+                                        <span class="underLine"></span>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="liLists hoverView">
+                                <a href="#">
+                                    <span class="navOne">ALL OUR</span>
+                                    <h1 class="nav-head arrow">SERVICES</h1>
+                                    <!-- <span class="material-symbols-outlined arrow">
+                                            arrow_drop_down
+                                        </span> -->
+                                    <div class="lineDiv">
+                                        <span class="underLine"></span>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="liLists hoverWork">
+                                <a href="#">
+                                    <span class="navOne">HOW WE</span>
+                                    <h1 class="nav-head arrow">WORK</h1>
+                                    <!-- <span class="material-symbols-outlined arrow">
+                                            arrow_drop_down
+                                        </span> -->
+
+                                    <div class="lineDiv">
+                                        <span class="underLine"></span>
+
+                                    </div>
+                                </a>
+                                <!-- 
+                                    <div class="sub-menu">
+                                        <ul class="mobileUl">
+                                            <li class="mobileLi">
+                                                PORTFOLIO
+                                            </li>
+                                            <li  class="mobileLi">
+                                                CASE STUDIES
+                                            </li>
+                                            <li  class="mobileLi">
+                                                OUR STORIES
+                                            </li>
+                                        </ul>
+                                    </div> -->
+
+                            </li>
+
+
+
+
+                        </ul>
+                    </div>
+
+                    <div class="right-nav">
+                        <div class="inner-right-nav">
+                            <div class="tweet">
+                                <h2 class="blog-ey">EY BLOG</h2>
+                            </div>
+                            <div class="contactBtn">
+                                <img class="headsetIcon" src="./Images/ic_headset_mic_24px.png" alt="">
+                                <button class="innerBtn">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topSide-header">
                         <div class="header-menu">
                             <ul class="ulLists">
                                 <li class="liLists">
@@ -65,51 +166,65 @@
                                     </a>
                                 </li>
 
-                                <li class="liLists hoverView">
-                                    <a href="#">
+                                <li class="liLists hoverView" id="click">
+                                    <a class="allService" href="#">
                                         <span class="navOne">ALL OUR</span>
                                         <h1 class="nav-head arrow">SERVICES</h1>
                                         <!-- <span class="material-symbols-outlined arrow">
-                                            arrow_drop_down
-                                        </span> -->
+                                                arrow_drop_down
+                                            </span> -->
                                         <div class="lineDiv">
                                             <span class="underLine"></span>
 
                                         </div>
                                     </a>
-                                </li>
-
-                                <li class="liLists hoverWork">
-                                    <a href="#">
-                                        <span class="navOne">HOW WE</span>
-                                        <h1 class="nav-head arrow">WORK</h1>
-                                        <!-- <span class="material-symbols-outlined arrow">
-                                            arrow_drop_down
-                                        </span> -->
-
-                                        <div class="lineDiv">
-                                            <span class="underLine"></span>
-
-                                        </div>
-                                    </a>
-<!-- 
                                     <div class="sub-menu">
                                         <ul class="mobileUl">
                                             <li class="mobileLi">
                                                 PORTFOLIO
                                             </li>
-                                            <li  class="mobileLi">
+                                            <li class="mobileLi">
                                                 CASE STUDIES
                                             </li>
-                                            <li  class="mobileLi">
+                                            <li class="mobileLi">
                                                 OUR STORIES
                                             </li>
                                         </ul>
-                                    </div> -->
-                                 
+                                    </div>
+
                                 </li>
 
-                               
+                                <li class="liLists hoverWork" id="click">
+                                    <a class="allService"  href="#">
+                                        <span class="navOne">HOW WE</span>
+                                        <h1 class="nav-head arrow">WORK</h1>
+                                        <!-- <span class="material-symbols-outlined arrow">
+                                                arrow_drop_down
+                                            </span> -->
+
+                                        <div class="lineDiv">
+                                            <span class="underLine"></span>
+
+                                        </div>
+                                    </a>
+
+                                    <div class="sub-menu">
+                                        <ul class="mobileUl">
+                                            <li class="mobileLi">
+                                                PORTFOLIO
+                                            </li>
+                                            <li class="mobileLi">
+                                                CASE STUDIES
+                                            </li>
+                                            <li class="mobileLi">
+                                                OUR STORIES
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+
 
 
                             </ul>
@@ -126,109 +241,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="topSide-header">
-                            <div class="header-menu">
-                                <ul class="ulLists">
-                                    <li class="liLists">
-                                        <a href="#">
-                                            <span class="navOne">BRANDING & SITE</span>
-                                            <h1 class="nav-head">DESIGN</h1>
-                                            <div class="lineDiv">
-                                                <span class="underLine"></span>
-    
-                                            </div>
-                                        </a>
-                                    </li>
-    
-    
-                                    <li class="liLists">
-                                        <a href="#">
-                                            <span class="navOne"> DIGITAL</span>
-                                            <h1 class="nav-head">MARKETING</h1>
-                                            <div class="lineDiv">
-                                                <span class="underLine"></span>
-    
-                                            </div>
-                                        </a>
-                                    </li>
-    
-                                    <li class="liLists">
-                                        <a href="#">
-                                            <span class="navOne"> STORE</span>
-                                            <h1 class="nav-head">MAINTENANCE </h1>
-                                            <div class="lineDiv">
-                                                <span class="underLine"></span>
-    
-                                            </div>
-                                        </a>
-                                    </li>
-    
-                                    <li class="liLists hoverView">
-                                        <a href="#">
-                                            <span class="navOne">ALL OUR</span>
-                                            <h1 class="nav-head arrow">SERVICES</h1>
-                                            <!-- <span class="material-symbols-outlined arrow">
-                                                arrow_drop_down
-                                            </span> -->
-                                            <div class="lineDiv">
-                                                <span class="underLine"></span>
-    
-                                            </div>
-                                        </a>
-                                    </li>
-    
-                                    <li class="liLists hoverWork" id="click">
-                                        <a href="#">
-                                            <span class="navOne">HOW WE</span>
-                                            <h1 class="nav-head arrow">WORK</h1>
-                                            <!-- <span class="material-symbols-outlined arrow">
-                                                arrow_drop_down
-                                            </span> -->
-    
-                                            <div class="lineDiv">
-                                                <span class="underLine"></span>
-    
-                                            </div>
-                                        </a>
-    
-                                        <div class="sub-menu">
-                                            <ul class="mobileUl">
-                                                <li class="mobileLi">
-                                                    PORTFOLIO
-                                                </li>
-                                                <li  class="mobileLi">
-                                                    CASE STUDIES
-                                                </li>
-                                                <li  class="mobileLi">
-                                                    OUR STORIES
-                                                </li>
-                                            </ul>
-                                        </div>
-                                     
-                                    </li>
-    
-                                   
-    
-    
-                                </ul>
-                            </div>
-    
-                            <div class="right-nav">
-                                <div class="inner-right-nav">
-                                    <div class="tweet">
-                                        <h2 class="blog-ey">EY BLOG</h2>
-                                    </div>
-                                    <div class="contactBtn">
-                                        <img class="headsetIcon" src="./Images/ic_headset_mic_24px.png" alt="">
-                                        <button class="innerBtn">Contact</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
 
-                        
+
                     <!-- </div> -->
 
 
@@ -238,7 +254,7 @@
 
             <div class="inner-content click">
 
-                
+
                 <div class="hover-service-section">
                     <div class="grid-container">
                         <div class="inner-grid">
@@ -263,7 +279,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/pppc.svg" alt="">
+                                                <img class="serviceImg" src="./Images/pppc.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">PPC</p>
@@ -279,7 +295,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/Videography.svg" alt="">
+                                                <img class="serviceImg" src="./Images/Videography.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">VIDEOGRAPHY</p>
@@ -295,7 +311,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/Design.svg" alt="">
+                                                <img class="serviceImg" src="./Images/Design.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">DESIGN</p>
@@ -311,7 +327,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/email marketing.svg" alt="">
+                                                <img class="serviceImg" src="./Images/email marketing.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">EMAIL MARKETING</p>
@@ -327,7 +343,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/photography.svg" alt="">
+                                                <img class="serviceImg" src="./Images/photography.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">PHOTOGRAPHY</p>
@@ -343,7 +359,7 @@
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/seo.svg" alt="">
+                                                <img class="serviceImg" src="./Images/seo.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">SEO</p>
@@ -352,14 +368,14 @@
                                     </a>
                                     <hr class="borderLine">
                                 </li>
-                           
+
 
 
                                 <li class="li-grids">
                                     <a href="#">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/socila marketing.svg" alt="">
+                                                <img class="serviceImg" src="./Images/socila marketing.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">SOCIAL MARKETING</p>
@@ -375,7 +391,7 @@
                                     <a href="">
                                         <div class="grid-contents">
                                             <div class="img-grid">
-                                                <img  class="serviceImg" src="./Images/Content.svg" alt="">
+                                                <img class="serviceImg" src="./Images/Content.svg" alt="">
                                             </div>
                                             <div class="title-grid">
                                                 <p class="title-div">CONTENT CREATION</p>
@@ -437,7 +453,7 @@
 
                                     <div class="portfolioDiv caseStudy">
                                         <div class="portImg">
-                                            <img  class="imgPort" src="./Images/laptop_OD.png" alt="">
+                                            <img class="imgPort" src="./Images/laptop_OD.png" alt="">
                                         </div>
                                         <div class="details">
                                             <h2 class="workTitle">CASE STUDIES</h2>
@@ -459,7 +475,7 @@
 
                                     <div class="portfolioDiv ourWork">
                                         <div class="portImg">
-                                            <img  class="imgPort" src="./Images/house.png" alt="">
+                                            <img class="imgPort" src="./Images/house.png" alt="">
                                         </div>
                                         <div class="details">
                                             <h2 class="workTitle">OUR STORY</h2>
@@ -491,7 +507,7 @@
 
 
 
-                
+
                 <div class="content-nav">
                     <div class="left-nav">
                         <div class="inner-nav">
@@ -583,7 +599,7 @@
 
             </div>
         </div>
-        
+
         <div class="blur"></div>
     </div>
 

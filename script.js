@@ -63,33 +63,52 @@ hoverWorkSection.addEventListener("mouseout", () => {
 // mobile menu toggle functions
 
 
-let menuIcon = document.querySelector(".menuIcon");
-let cancelIcon = document.querySelector(".cancelIcon");
-let headerMobile = document.querySelector(".topSide-header");
-let subMenu = document.querySelector(".sub-menu");
-let click = document.querySelector("#click")
+// let menuIcon = document.querySelector(".menuIcon");
+// let cancelIcon = document.querySelector(".cancelIcon");
+// let headerMobile = document.querySelector(".topSide-header");
+// let subMenu = document.querySelector(".sub-menu");
+// let click = document.querySelector("#click")
 
-menuIcon.addEventListener("click", () => {
+// menuIcon.addEventListener("click", () => {
 
-   cancelIcon.style.display = "block";
-   menuIcon.style.display = "none";
-   headerMobile.style.display = "block";
+//    cancelIcon.style.display = "block";
+//    menuIcon.style.display = "none";
+//    headerMobile.style.display = "block";
+
+// })
+
+// cancelIcon.addEventListener("click", () => {
+//    menuIcon.style.display = "block";
+//    cancelIcon.style.display = "none"
+//    headerMobile.style.display = "none";
+
+// })
+
+
+$('.menuIcon').click(function () {
+   $('.topSide-header').toggle(1000);
+   $('.cancelIcon').show(1000);
+   $('.menuIcon').hide();
+
+})
+$('.cancelIcon').click(function () {
+   $('.menuIcon').show(1000);
+   $('.cancelIcon').hide(1000);
+   $('.topSide-header').toggle(750);
 
 })
 
-cancelIcon.addEventListener("click", () => {
-   menuIcon.style.display = "block";
-   cancelIcon.style.display = "none"
-   headerMobile.style.display = "none";
 
+
+// sub-menu toggle function
+
+$('.allService').click(function () {
+   $(this).next('.sub-menu').toggle(1000)
+   $('.sub-menu').not($(this).next('.sub-menu')).slideUp(800);
 })
 
 
-click.addEventListener('click', () => {
-   // subMenu.style.display ="block";
-   subMenu.classList.toggle("opens");
-   // alert("h")
-})
+
 
 
 
